@@ -6,6 +6,8 @@ const initialState = {
 	error: null,
 };
 
+// to add a variable to  track current todo
+
 export default function todos(state = initialState, action) {
 	switch (action.type) {
 		case CURRENT_TODO:
