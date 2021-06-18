@@ -7,6 +7,7 @@ const Form = () => {
 	const dispatch = useDispatch();
 	const currentTodo = useSelector((state) => state.todo);
 	const handleChange = (e) => setData(e.target.value);
+
 	const currentState = currentTodo.todo.length === 0 ? "" : currentTodo.todo.todo;
 	const [data, setData] = useState(currentState);
 	console.log(currentTodo.todo.todo);
