@@ -26,7 +26,6 @@ const Home = () => {
 					</div>
 				</div>
 				<div className={styles.EditContainer}>
-					<div className={styles.EditHeader}>Edit</div>
 					<Form />
 				</div>
 			</div>
