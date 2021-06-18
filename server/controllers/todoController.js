@@ -80,3 +80,5 @@ export const updateTodo = async (req, res) => {
 		});
 	}
 };
+
+// AUTH CAN BE ADDED
