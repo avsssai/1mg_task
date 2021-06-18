@@ -6,6 +6,7 @@ const API = axios.create({
 	baseURL: url,
 });
 
+export const getOneTodo = (id) => API.get(`/todos/${id}`);
 export const getAllTodos = () => API.get("/todos/all-todos");
 export const addTodo = (newTodo) => API.post("/todos/add", newTodo);
 export const deleteTodo = (todoId) => API.delete(`/todos/delete/${todoId}`);

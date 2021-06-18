@@ -2,8 +2,8 @@ import mongoose from "mongoose";
 
 const todosSchema = mongoose.Schema({
 	todo: String,
+	content: String,
 	done: Boolean,
-
 	createdAt: {
 		type: Date,
 		default: Date.now,

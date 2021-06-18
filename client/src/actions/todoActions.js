@@ -1,5 +1,5 @@
 import * as api from "../api.js";
-import { ADD_TODO, DELETE_TODO, GET_ALL, UPDATE_TODO } from "../constants/actionTypes.js";
+import { ADD_TODO, CURRENT_TODO, DELETE_TODO, GET_ALL, UPDATE_TODO } from "../constants/actionTypes.js";
 
 export const getAllTodos = () => async (dispatch) => {
 	try {
@@ -10,9 +10,18 @@ export const getAllTodos = () => async (dispatch) => {
 	}
 };
 
-export const addTodo = () => async (dispatch) => {
+export const getCurrentTodo = (id) => async (dispatch) => {
 	try {
-		const { data } = await api.addTodo();
+		const { data } = await api.getOneTodo(id);
+		dispatch({ type: CURRENT_TODO, payload: data.todo });
+	} catch (error) {
+		console.log(error);
+	}
+};
+
+export const addTodo = (newTodo) => async (dispatch) => {
+	try {
+		const { data } = await api.addTodo(newTodo);
 		dispatch({ type: ADD_TODO, payload: data.todo });
 	} catch (error) {
 		console.log(error);

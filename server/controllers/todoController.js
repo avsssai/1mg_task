@@ -19,7 +19,7 @@ export const getTodo = async (req, res) => {
 	try {
 		// GET A SINGLE TODO
 		const todoId = req.params.id;
-		const todo = await Todo.findById(id);
+		const todo = await Todo.findById(todoId);
 		res.status(200).json({
 			message: "todo found",
 			todo,

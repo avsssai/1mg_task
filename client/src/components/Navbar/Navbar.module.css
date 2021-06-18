@@ -1,0 +1,17 @@
+.NavbarContainer {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	background-color: #ef476f;
+	font-weight: 600;
+	color: white;
+}
+
+.NavbarContainer > .NavbarNavs > ul {
+	display: flex;
+	list-style: none;
+}
+
+.NavbarContainer > .NavbarNavs > ul > li {
+	margin: 0 1rem;
+}

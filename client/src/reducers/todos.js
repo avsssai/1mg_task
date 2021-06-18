@@ -21,14 +21,8 @@ export default function todos(state = initialState, action) {
 				...state,
 				loading: true,
 			};
-		case FETCHING_END:
-			return {
-				...state,
-				loading: false,
-			};
 		case GET_ALL:
 			return {
-				...state,
 				loading: false,
 				todos: action.payload,
 				error: null,
@@ -37,7 +31,7 @@ export default function todos(state = initialState, action) {
 			return {
 				...state,
 				loading: false,
-				todos: [...state.payload, action.payload],
+				todos: [...state.todos, action.payload],
 			};
 		case DELETE_TODO:
 			const list_after_delete = [...state.todos].filter((todo) => todo._id !== action.payload._id);
@@ -60,7 +54,6 @@ export default function todos(state = initialState, action) {
 				...state,
 				error: action.payload,
 			};
-
 		default:
 			return state;
 	}

@@ -1,0 +1,10 @@
+.ContentContainer {
+	display: grid;
+	grid-template-columns: 16em 1fr;
+	grid-gap: 2rem;
+}
+
+.TodosContainer,
+.EditContainer {
+	margin: 1rem 0.5rem;
+}

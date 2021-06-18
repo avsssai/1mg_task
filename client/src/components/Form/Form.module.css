@@ -1,0 +1,10 @@
+.formContainer {
+	width: fit-content;
+}
+
+.textarea {
+	font: inherit;
+	height: fit-content;
+	min-width: fit-content;
+	border: none;
+}
